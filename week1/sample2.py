@@ -10,9 +10,17 @@ class D(C):
 for cls in [B, C, D]:
     try:
         raise cls()
+    except B:
+        print("B")
+    except D:
+        print("D")
+    except C:
+        print("C")
+    '''
     except D:
         print("D")
     except C:
         print("C")
     except B:
         print("B")
+    '''
