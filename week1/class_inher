@@ -1,0 +1,13 @@
+class Animal:
+    def speak(self):
+        print("动物发出声音")
+
+
+class Dog(Animal):
+    def speak(self):
+        super().speak()          # 先调用父类的 speak
+        print("汪汪！")
+
+
+d = Dog()
+d.speak()
