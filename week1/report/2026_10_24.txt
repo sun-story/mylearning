@@ -1,2 +1,5 @@
 学习了global与nonlocal的用法，并且注意到python中写到类/函数中的变量一旦出现在赋值语句x = ...中就会被视为局部变量，即使前面已经出现过。
-global让一个变量在整个模块（文件）中都生效，而nonlocal则只在其最近的父模块中生效
+global让一个变量在整个模块的namespace中，而nonlocal让其在其所在模块的父模块的namespace中
+python中不同模块拥有不同的namespace,不同namespace中名字完全可以重叠！！！
+
+python类中方法的第一个参数会被命名为 `self`。这仅仅是一种约定俗成的做法：`self` 这个名称在 Python 中没有任何特殊含义。但是请注意，如果不遵循这种约定，你的代码对其他 Python 程序员来说可能可读性较差
